@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js" integrity="sha512-otOZr2EcknK9a5aa3BbMR9XOjYKtxxscwyRHN6zmdXuRfJ5uApkHB7cz1laWk2g8RKLzV9qv/fl3RPwfCuoxHQ==" crossorigin="anonymous"></script>
+</head>
+<body>
+{% verbatim %}
+    <div class="container" id="post_app">
+
+        <div class="text" v-for="Post in posts">
+          <hr>   <h1>
+    {{ Post.title }}
+    </h1><br>
+
+    <p>{{ Post.body }}</p><br>
+
+        <h5>Автор статьи: {{Post.author}}</h5>
+      <p>Опубликовано {{Post.date_release}}</p>
+   <aside>
+
+   </aside>
+        </div>
+
+
+
+    </div>
+
+
+{% endverbatim %}
+
+<script src="/directory_static/app.js"></script>
+</body>
+</html>
